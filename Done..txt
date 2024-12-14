@@ -1,0 +1,824 @@
+
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>School Website</title>
+<style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: 'Arial', sans-serif;
+background: linear-gradient(120deg, #a8ff78, #78ffd6);
+color: #333;
+}
+
+.title {
+text-align: center;
+font-size: 3rem;
+font-weight: bold;
+margin: 20px 0;
+padding: 10px 0;
+background: linear-gradient(45deg, #8a2be2, #800080);
+/* Purple gradient */
+color: #fff;
+border-radius: 10px;
+animation: fadeInDown 1.5s;
+}
+
+@keyframes fadeInDown {
+from {
+opacity: 0;
+transform: translateY(-50px);
+}
+
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+.nav-container {
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 10px;
+}
+
+.nav-item {
+margin: 0 15px;
+padding: 15px 25px;
+background: linear-gradient(45deg, #ff9a9e, #ffcccb);
+color: #fff;
+text-decoration: none;
+border-radius: 10px;
+transition: background 0.3s, transform 0.3s ease;
+}
+
+.nav-item:hover {
+background: linear-gradient(45deg, #ffcccb, #ff9a9e);
+transform: translateY(-5px);
+}
+
+.container {
+text-align: center;
+padding: 20px;
+}
+
+.school-gallery {
+display: grid;
+grid-template-columns: repeat(5, 1fr);
+gap: 15px;
+margin: 20px auto;
+max-width: 1200px;
+padding: 0 10px;
+}
+
+.school-gallery img {
+width: 100%;
+height: auto;
+border-radius: 10px;
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+transition: transform 0.3s;
+cursor: pointer;
+}
+
+.school-gallery img:hover {
+transform: scale(1.05);
+}
+
+.lightbox {
+display: none;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.8);
+justify-content: center;
+align-items: center;
+z-index: 1000;
+}
+
+.lightbox img {
+max-width: 90%;
+max-height: 80%;
+border-radius: 10px;
+box-shadow: 0 5px 20px rgba(255, 255, 255, 0.9);
+}
+
+.lightbox:target {
+display: flex;
+}
+
+footer {
+margin-top: 20px;
+font-size: 0.8rem;
+color: #555;
+text-align: center;
+}
+</style>
+</head>
+
+<body>
+<!-- School Title -->
+<div class="title">Kaligonj Pilot Model High School</div>
+</body>
+
+</html>
+
+<!-- Navigation Menu -->
+<div class="nav-container">
+<a href="#home" class="nav-item">Home</a>
+<a href="#admission" class="nav-item">Admission</a>
+<a href="#school-rules" class="nav-item">School Rules</a>
+<a href="#others" class="nav-item">Others</a>
+</div>
+
+<div class="container">
+<!-- School Gallery -->
+<div class="school-gallery">
+<a href="#img1">
+<img src="https://i.ibb.co.com/fr7PSTf/299814832-470352058429589-7098624702635725135-n.jpg" alt="Image 1">
+</a>
+<a href="#img2">
+<img src="https://i.ibb.co.com/ymTXGMJ/90039220-2620653544821314-6779110933294743552-n.jpg" alt="Image 2">
+</a>
+<a href="#img3">
+<img src="https://i.ibb.co.com/cDWwsc3/29315235-2104981179721889-3963584253848977408-n.jpg" alt="Image 3">
+</a>
+<a href="#img4">
+<img src="https://i.ibb.co.com/7Y0wv4W/69511856-2444463132440357-8219671208078082048-n.jpg" alt="Image 4">
+</a>
+<a href="#img5">
+<img src="https://i.ibb.co.com/47vKTvy/119506014-2786602631559737-6303333404332411894-n.jpg" alt="Image 5">
+</a>
+<a href="#img6">
+<img src="https://i.ibb.co.com/DVtgrnN/Screenshot-2024-12-14-012350.png" alt="Image 6">
+</a>
+<a href="#img7">
+<img src="https://i.ibb.co.com/G5zzQ4C/Screenshot-2024-12-14-013156.png" alt="Image 7">
+</a>
+<a href="#img8">
+<img src="https://i.ibb.co.com/4RPTgVN/Screenshot-2024-12-14-013204.png" alt="Image 8">
+</a>
+<a href="#img9">
+<img src="https://i.ibb.co.com/qMPDzdp/Screenshot-2024-12-14-013210.png" alt="Image 9">
+</a>
+<a href="#img10">
+<img src="https://i.ibb.co.com/RyCdFs7/Screenshot-2024-12-14-013217.png" alt="Image 10">
+</a>
+</div>
+
+<!-- Lightbox -->
+<div id="img1" class="lightbox">
+<img src="https://i.ibb.co.com/fr7PSTf/299814832-470352058429589-7098624702635725135-n.jpg" alt="Image 1">
+</div>
+<div id="img2" class="lightbox">
+<img src="https://i.ibb.co.com/ymTXGMJ/90039220-2620653544821314-6779110933294743552-n.jpg" alt="Image 2">
+</div>
+<div id="img3" class="lightbox">
+<img src="https://i.ibb.co.com/cDWwsc3/29315235-2104981179721889-3963584253848977408-n.jpg" alt="Image 3">
+</div>
+<div id="img4" class="lightbox">
+<img src="https://i.ibb.co.com/7Y0wv4W/69511856-2444463132440357-8219671208078082048-n.jpg" alt="Image 4">
+</div>
+<div id="img5" class="lightbox">
+<img src="https://i.ibb.co.com/47vKTvy/119506014-2786602631559737-6303333404332411894-n.jpg" alt="Image 5">
+</div>
+<div id="img6" class="lightbox">
+<img src="https://i.ibb.co.com/DVtgrnN/Screenshot-2024-12-14-012350.png" alt="Image 6">
+</div>
+<div id="img7" class="lightbox">
+<img src="https://i.ibb.co.com/G5zzQ4C/Screenshot-2024-12-14-013156.png" alt="Image 7">
+</div>
+<div id="img8" class="lightbox">
+<img src="https://i.ibb.co.com/4RPTgVN/Screenshot-2024-12-14-013204.png" alt="Image 8">
+</div>
+<div id="img9" class="lightbox">
+<img src="https://i.ibb.co.com/qMPDzdp/Screenshot-2024-12-14-013210.png" alt="Image 9">
+</div>
+<div id="img10" class="lightbox">
+<img src="https://i.ibb.co.com/RyCdFs7/Screenshot-2024-12-14-013217.png" alt="Image 10">
+</div>
+</div>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Colorful Divider</title>
+<style>
+.divider {
+height: 5px;
+width: 100%;
+background: linear-gradient(90deg, #FFCC00, #007BFF);
+/* Yellow and Blue gradient */
+margin: 20px 0;
+}
+</style>
+
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scrolling Divider</title>
+<style>
+.divider {
+height: 5px;
+width: 100%;
+background: linear-gradient(90deg, #FFCC00, #007BFF);
+/* Yellow and Blue gradient */
+margin: 20px 0;
+position: relative;
+overflow: hidden;
+}
+
+.divider-text {
+position: absolute;
+top: 50%;
+left: 100%;
+transform: translateY(-50%);
+font-size: 20px;
+color: #FFFFFF;
+white-space: nowrap;
+animation: scrollText 10s linear infinite;
+}
+
+@keyframes scrollText {
+0% {
+left: 100%;
+}
+
+100% {
+left: -100%;
+}
+}
+</style>
+</head>
+
+<body>
+
+<div class="divider">
+<div class="divider-text">Made by LIKHUN ------ Made by LIKHUN ----Made by LIKHUN---- Made by LIKHUN---- Made by LIKHUN</div>
+</div>
+
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Watermark Divider</title>
+<style>
+.divider {
+height: 35px;
+/* Divider height set to 35px */
+width: 100%;
+background: linear-gradient(90deg, #FFCC00, #007BFF);
+/* Yellow and Blue gradient */
+margin: 20px 0;
+position: relative;
+overflow: hidden;
+}
+
+.divider-text {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+font-size: 25px;
+/* Font size reduced */
+color: rgba(255, 255, 255, 0.2);
+/* White color with transparency for watermark effect */
+white-space: nowrap;
+pointer-events: none;
+/* Ensures the text doesn't interfere with other elements */
+}
+
+.scrolling-text {
+position: absolute;
+top: 50%;
+left: 100%;
+transform: translateY(-50%);
+font-size: 20px;
+/* Font size reduced */
+color: #FFFFFF;
+white-space: nowrap;
+animation: scrollText 10s linear infinite;
+}
+
+@keyframes scrollText {
+0% {
+left: 100%;
+}
+
+100% {
+left: -100%;
+}
+}
+</style>
+</head>
+
+<body>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kaligonj Pilot Model High School</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+background: linear-gradient(to right, cyan, orange);
+/* Cyan and Orange mix as background */
+color: white;
+/* Text color white */
+}
+
+.content-block {
+display: flex;
+flex-wrap: wrap;
+margin: 20px;
+background: linear-gradient(to right, indigo, green);
+/* Indigo and Green mix for the box background */
+border-radius: 8px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+padding: 20px;
+}
+
+.content-block img {
+max-width: 100%;
+border-radius: 8px;
+margin-right: 20px;
+}
+
+.content-text {
+flex: 1;
+padding: 20px;
+}
+
+.content-text h2 {
+font-size: 24px;
+color: #fff;
+/* White text color */
+}
+
+.content-text p {
+font-size: 16px;
+color: #ddd;
+/* Light text color */
+line-height: 1.6;
+}
+
+.content-text p strong {
+font-weight: bold;
+}
+
+.content-text .button {
+margin-top: 20px;
+padding: 10px 20px;
+background-color: #0066cc;
+color: red;
+text-decoration: none;
+border-radius: 5px;
+font-size: 16px;
+}
+
+.content-text .button:hover {
+background-color: #004d99;
+}
+</style>
+</head>
+
+<body>
+
+<div class="content-block">
+<a href="https://imgbb.com/">
+<img src="https://i.ibb.co.com/W5bGxQ4/Screenshot-2024-12-14-164546.png" alt="Screenshot-2024-12-14-164546" border="0">
+</a>
+<div class="content-text">
+<h2>Welcome to Kaligonj Pilot Model High School</h2>
+<p>
+
+</p>
+<p>
+
+
+Kaliganj Pilot Model High School is a prestigious educational institution in Kaliganj Upazila of Satkhira District. Recognized as a government pilot model school, it was established to provide high-quality education. Over the years, it has excelled in academic and cultural activities, making a significant impact on the region.
+
+The school’s primary goal is to deliver quality education, enabling students to achieve their academic and personal ambitions. It offers a well-rounded curriculum covering sciences, humanities, and social studies. Emphasis is placed on critical thinking, creativity, and problem-solving. Alongside academics, the school encourages participation in co-curricular activities like sports, music, drama, and the arts, fostering students' overall growth.
+
+Kaliganj Pilot Model High School features modern facilities, including spacious classrooms, a well-equipped library, and advanced laboratories for science and computer studies. These resources create a conducive learning environment and help students develop practical skills essential for their future careers.
+
+The teaching staff is highly qualified and dedicated, providing personalized guidance to students. Regular training ensures teachers are updated with modern methodologies, contributing to the school’s excellent academic results. Students consistently perform well in public exams and national competitions, reflecting the institution's commitment to academic excellence.
+
+Extracurricular activities are integral to the school’s approach, fostering leadership, teamwork, and confidence. Events like sports days, cultural festivals, and talent shows provide opportunities for students to showcase their abilities. Additionally, the school contributes to community development through awareness programs and workshops on health, education, and environmental issues.
+
+With its strong focus on academics, extracurricular growth, and community involvement, Kaliganj Pilot Model High School continues to be a cornerstone of progress in Kaliganj Upazila. It remains a model institution, shaping the future of countless students.
+
+</p>
+</div>
+</div>
+
+</body>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>School Website</title>
+<style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: 'Arial', sans-serif;
+background: linear-gradient(120deg, #a8ff78, #78ffd6);
+color: #333;
+}
+
+.title {
+text-align: center;
+font-size: 3rem;
+font-weight: bold;
+margin: 20px 0;
+padding: 10px 0;
+background: linear-gradient(45deg, #8a2be2, #800080);
+/* Purple gradient */
+color: #fff;
+border-radius: 10px;
+animation: fadeInDown 1.5s;
+}
+
+@keyframes fadeInDown {
+from {
+opacity: 0;
+transform: translateY(-50px);
+}
+
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+.nav-container {
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 10px;
+}
+
+.nav-item {
+margin: 0 15px;
+padding: 15px 25px;
+background: linear-gradient(45deg, #ff9a9e, #ffcccb);
+color: #fff;
+text-decoration: none;
+border-radius: 10px;
+transition: background 0.3s, transform 0.3s ease;
+}
+
+.nav-item:hover {
+background: linear-gradient(45deg, #ffcccb, #ff9a9e);
+transform: translateY(-5px);
+}
+
+.container {
+text-align: center;
+padding: 20px;
+}
+
+
+</div>
+</div>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Colorful Divider</title>
+<style>
+.divider {
+height: 5px;
+width: 100%;
+background: linear-gradient(90deg, #FFCC00, #007BFF);
+/* Yellow and Blue gradient */
+margin: 20px 0;
+}
+</style>
+
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scrolling Divider</title>
+<style>
+.divider {
+height: 5px;
+width: 100%;
+background: linear-gradient(90deg, #FFCC00, #007BFF);
+/* Yellow and Blue gradient */
+margin: 20px 0;
+position: relative;
+overflow: hidden;
+}
+
+.divider-text {
+position: absolute;
+top: 50%;
+left: 100%;
+transform: translateY(-50%);
+font-size: 20px;
+color: #FFFFFF;
+white-space: nowrap;
+animation: scrollText 10s linear infinite;
+}
+
+@keyframes scrollText {
+0% {
+left: 100%;
+}
+
+100% {
+left: -100%;
+}
+}
+</style>
+</head>
+
+<body>
+
+<div class="divider">
+<div class="divider-text">Made by LIKHUN ------ Made by LIKHUN ----Made by LIKHUN---- Made by LIKHUN---- Made by LIKHUN</div>
+</div>
+
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Watermark Divider</title>
+<style>
+.divider {
+height: 35px;
+/* Divider height set to 35px */
+width: 100%;
+background: linear-gradient(90deg, #FFCC00, #007BFF);
+/* Yellow and Blue gradient */
+margin: 20px 0;
+position: relative;
+overflow: hidden;
+}
+
+.divider-text {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+font-size: 25px;
+/* Font size reduced */
+color: rgba(255, 255, 255, 0.2);
+/* White color with transparency for watermark effect */
+white-space: nowrap;
+pointer-events: none;
+/* Ensures the text doesn't interfere with other elements */
+}
+
+.scrolling-text {
+position: absolute;
+top: 50%;
+left: 100%;
+transform: translateY(-50%);
+font-size: 20px;
+/* Font size reduced */
+color: #FFFFFF;
+white-space: nowrap;
+animation: scrollText 10s linear infinite;
+}
+
+@keyframes scrollText {
+0% {
+left: 100%;
+}
+
+100% {
+left: -100%;
+}
+}
+</style>
+</head>
+
+<body>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kaligonj Pilot Model High School</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+background: linear-gradient(to right, cyan, orange);
+/* Cyan and Orange mix as background */
+color: white;
+/* Text color white */
+}
+
+.content-block {
+display: flex;
+flex-wrap: wrap;
+margin: 20px;
+background: linear-gradient(to right, indigo, green);
+/* Indigo and Green mix for the box background */
+border-radius: 8px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+padding: 20px;
+}
+
+.content-block img {
+max-width: 100%;
+border-radius: 8px;
+margin-right: 20px;
+}
+
+.content-text {
+flex: 1;
+padding: 20px;
+}
+
+.content-text h2 {
+font-size: 24px;
+color: #fff;
+/* White text color */
+}
+
+.content-text p {
+font-size: 16px;
+color: #ddd;
+/* Light text color */
+line-height: 1.6;
+}
+
+.content-text p strong {
+font-weight: bold;
+}
+
+.content-text .button {
+margin-top: 20px;
+padding: 10px 20px;
+background-color: #0066cc;
+color: red;
+text-decoration: none;
+border-radius: 5px;
+font-size: 16px;
+}
+
+.content-text .button:hover {
+background-color: #004d99;
+}
+</style>
+</head>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kaligonj Pilot Model High School</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+background: linear-gradient(to right, cyan, orange);
+color: white;
+}
+
+.content-block {
+display: flex;
+flex-wrap: wrap;
+margin: 20px;
+background: linear-gradient(to right, indigo, green);
+border-radius: 8px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+padding: 20px;
+}
+
+.content-block img {
+max-width: 100%;
+border-radius: 8px;
+margin-right: 20px;
+}
+
+.content-text {
+flex: 1;
+padding: 20px;
+}
+
+.content-text h2 {
+font-size: 24px;
+color: #fff;
+}
+
+.content-text p {
+font-size: 16px;
+color: #ddd;
+line-height: 1.6;
+}
+
+.content-text p strong {
+font-weight: bold;
+}
+
+.content-text .button {
+margin-top: 20px;
+padding: 10px 20px;
+background-color: #0066cc;
+color: red;
+text-decoration: none;
+border-radius: 5px;
+font-size: 16px;
+}
+
+.content-text .button:hover {
+background-color: #004d99;
+}
+
+.divider {
+height: 40px;
+width: 100%;
+background: linear-gradient(90deg, orange, maroon);
+margin: 30px 0;
+position: relative;
+overflow: hidden;
+}
+
+.divider-text {
+position: absolute;
+top: 50%;
+left: 100%;
+transform: translateY(-50%);
+font-size: 20px;
+color: #FFFFFF;
+white-space: nowrap;
+animation: scrollText 30s linear infinite;
+}
+
+@keyframes scrollText {
+0% {
+left: 100%;
+}
+
+100% {
+left: -100%;
+}
+}
+</style>
+</head>
+
+<body>
+
+
+
